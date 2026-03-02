@@ -10,8 +10,16 @@ const httpServer = createServer((req, res) => {
   res.end("Socket.IO Classroom Game Server is running.\n");
 });
 
+const allowedOrigins = [
+  "https://white-stone-055c6c110.2.azurestaticapps.net/",      // e.g. https://myapp.azurestaticapps.net
+  "http://localhost:5500",            // keep this for local testing
+];
+
 const io = new Server(httpServer, {
-  cors: { origin: "*", methods: ["GET", "POST"] },
+  cors: {
+    origin: allowedOrigins,
+    methods: ["GET", "POST"],
+  },
 });
 
 const players = {}; // id -> { position, rotation, name }
