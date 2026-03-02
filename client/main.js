@@ -9,7 +9,8 @@ import {
 } from "./player.js";
 
 // ---------- Socket.IO ----------
-const socket = io("umes-vr-classroom-gteng2h7c4a7bwht.centralus-01.azurewebsites.net"); // backend server URL
+// Use the full HTTPS URL so all clients connect to the same Azure backend
+const socket = io("https://umes-vr-classroom-gteng2h7c4a7bwht.centralus-01.azurewebsites.net"); // backend server URL
 
 // ---------- Scene / Camera / Renderer ----------
 const scene = new THREE.Scene();
