@@ -9,7 +9,7 @@ import {
 } from "./player.js";
 
 // ---------- Socket.IO ----------
-const socket = io("http://localhost:4000"); // backend server URL
+const socket = io("umes-vr-classroom-gteng2h7c4a7bwht.centralus-01.azurewebsites.net"); // backend server URL
 
 // ---------- Scene / Camera / Renderer ----------
 const scene = new THREE.Scene();
